@@ -1,0 +1,41 @@
+.ui-button-disabled	.ui-button-icon-primary {
+  -webkit-animation: loda-anim .5s infinite linear alternate;
+  -moz-animation: loda-anim .5s infinite linear alternate;
+  -ms-animation: loda-anim .5s infinite linear alternate;
+	-o-animation: loda-anim .5s infinite linear alternate;
+	animation: loda-anim .5s infinite linear;
+	
+		-webkit-transition: -webkit-transform .3s;
+ -moz-transition: -moz-transform .3s;
+   -o-transition: -o-transform .3s;
+      transition: transform .3s;
+-webkit-transform-style: preserve-3d;
+ -moz-transform-style: preserve-3d;
+   -o-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+}
+
+@keyframes loda-anim {
+  from { -webkit-transform: rotateY(1deg); }
+  to { -webkit-transform: rotateY(179deg); }
+}
+
+@-moz-keyframes loda-anim {
+  from { -moz-transform: rotateY(1deg); }
+  to { -moz-transform: rotateY(179deg); }
+}
+
+@-webkit-keyframes loda-anim {
+  from { -webkit-transform: rotateY(1deg); }
+  to { -webkit-transform: rotateY(179deg); }
+}
+
+@-ms-keyframes loda-anim {
+  from { -ms-transform: rotateY(1deg); }
+  to { -ms-transform: rotateY(179deg); }
+}
+
+@-o-keyframes loda-anim {
+  from { -o-transform: rotateY(1deg); }
+  to { -o-transform: rotateY(179deg); }
+}

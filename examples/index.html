@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>loda-button-ui</title>
+	<link rel="stylesheet" href="../vendor/jquery-ui-1.10.3.css" />
+	<link rel="stylesheet" href="../loda-button-ui.css" />
+</head>
+<body>
+	<div style="width: 800px; margin:2em auto;">
+		<button data-primary-icon="ui-icon-locked" data-text="false">Button with icon only</button>
+		<button data-primary-icon="ui-icon-locked">Button with icon on the left</button>
+		<button data-primary-icon="ui-icon-gear" data-secondary-icon="ui-icon-triangle-1-s">Button with two icons</button>
+		<button data-primary-icon="ui-icon-gear" data-secondary-icon="ui-icon-triangle-1-s" data-text="false">Button with two icons and no text</button>
+	</div>
+
+	<script src="../vendor/jquery-1.9.1.js"></script>
+	<script src="../vendor/jquery-ui-1.10.3.js"></script>
+
+	<script>
+		$(function() {
+			$('button').each(function() {
+				var el = $(this),
+					notext = el.data('text') === false
+				el.button({
+					icons: {
+						primary: el.data('primary-icon'),
+						secondary: el.data('secondary-icon'),
+					},
+					text: !notext
+				}).on('click', function() {
+					var el = $(this).button('disable');
+					setTimeout(function() {
+						el.button('enable');
+					}, 2000);
+				});
+			});
+		});
+	</script>
+</body>
+</html>
